@@ -1,11 +1,17 @@
-const title = document.getElementById("title");
-/* title.innerHTML = "Fuck youuuuuuuuu";
-title.style.color = "red";
-console.log(title);
- */
+const title = document.querySelector("#title");
 
-function handleResize() {
-  console.log("I have been resized");
+const ClICKED_CLASS = "clicked";
+
+function handleClick() {
+  const currentClass = title.className;
+  if (currentClass !== ClICKED_CLASS) {
+    title.className = ClICKED_CLASS;
+  } else {
+    title.className = "";
+  }
 }
 
-window.addEventListener("resize", handleResize);
+function init() {
+  title.addEventListener("click", handleClick);
+}
+init();
