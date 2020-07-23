@@ -29,6 +29,8 @@ function loadName() {
   }
 }
 
-function init() {}
+function init() {
+  loadName();
+}
 
 init();
