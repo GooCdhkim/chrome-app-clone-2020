@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="--bottom-side-width: 196px;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-    <script src="clock.js" async></script>
+    <title>humentom</title>
+    <link rel="stylesheet" href="src/css/index.css" />
   </head>
   <body>
+    <div class="region region-1"></div>
+    <div class="region region-2">
+      <div class="region top-left"></div>
+      <div class="region top"></div>
+      <div class="region top-right">
+        <div id="weather" class="weather-container"><div></div></div>
+      </div>
+    </div>
+    <div class="region region-3"></div>
+    <div class="region region-4">
+      <div class="clock-container">
+        <span id="time" class="time">00:00</span>
+      </div>
+      <form class="prompt">
+        <span class="grettings">Good evening,</span>
+        <input class="prompt__input" type="text" placeholder="" />
+      </form>
+    </div>
+
+    <div class="region region-5">
+      <div class="focus-wrapper">
+        <div class="focuses">
+          <h3>What is your main focus for today?</h3>
+          <input type="text" autocomplete="off" />
+        </div>
+      </div>
+    </div>
+    <div class="region region-6">
+      <div class="region bottom-left">
+        <div id="setting"></div>
+        <div id="photoName"></div>
+      </div>
+      <div class="region bottom">
+        <div id="quotes"></div>
+      </div>
+      <div class="region bottom-right">
+        <div id="todo" class="todo"></div>
+      </div>
+    </div>
+    <script src="src/clock.js"></script>
+    <script src="src/gretting.js"></script>
   </body>
 </html>

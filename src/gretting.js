@@ -1,23 +1,30 @@
-const form = document.querySelector(".js-form");
+/* const form = document.querySelector(".prompt");
 const input = form.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
+
 const USER_LS = "currentUser";
-const SHOWING_ON = "showing";
+const SHOWING_CN = "showing";
+
+function saveName(text) {
+  localStorage.setItem(USER_LS, text);
+}
 
 function handleSubmit(event) {
   event.preventDefault();
-  /* const currentValue = input.value; */
+  const currentValue = input.value;
+  paintGreeting(currentValue);
+  saveName(currentValue);
 }
 
 function askForName() {
-  form.classList.add(SHOWING_ON);
+  form.classList.add(SHOWING_CN);
   form.addEventListener("submit", handleSubmit);
 }
 
-function paintGreeting(text) {
-  form.classList.remove(SHOWING_ON);
-  greeting.classList.add(SHOWING_ON);
-  greeting.innerText = `Hello ${text}`;
+function paintGreeting(txet) {
+  form.classList.remove(SHOWING_CN);
+  greeting.classList.add(SHOWING_CN);
+  greeting.innerText = `Hello ${txet}`;
 }
 
 function loadName() {
@@ -29,8 +36,4 @@ function loadName() {
   }
 }
 
-function init() {
-  loadName();
-}
-
-init();
+loadName(); */
