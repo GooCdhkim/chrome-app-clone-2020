@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="--bottom-side-width: 196px;">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,24 +16,67 @@
       </div>
     </div>
     <div class="region region-3"></div>
+
+    <!--  -->
+    <!--  -->
+
     <div class="region region-4">
-      <div class="clock-container">
-        <span id="time" class="time">00:00</span>
+      <div class="dDay-container">
+        <div class="dDay-wrapper">
+          <span id="dDay" class="dDay">D-365</span>
+        </div>
       </div>
-      <form class="prompt">
-        <span class="grettings">Good evening,</span>
-        <input class="prompt__input" type="text" placeholder="" />
-      </form>
+      <div class="calendar-container">
+        <div class="calendar-wrapper">
+          <div class="calndar"></div>
+        </div>
+      </div>
+      <div class="format-container">
+        <div class="format-wrapper">
+          <div class="format format-years">
+            <select name="years" id="years">
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+            </select>
+          </div>
+          <div class="format format-months">
+            <select name="months" id="months">
+              <option value="Jan">Jan</option>
+              <option value="Feb">Feb</option>
+              <option value="Mar">Mar</option>
+            </select>
+          </div>
+          <div class="format format-days">
+            <select name="days" id="days">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+          <div class="format submit-btn-wrapper">
+            <button class="submit-btn">
+              <span class="ico submit-btn-ico">></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!--  -->
+    <!--  -->
 
     <div class="region region-5">
       <div class="focus-wrapper">
         <div class="focuses">
-          <h3>What is your main focus for today?</h3>
+          <h3></h3>
           <input type="text" autocomplete="off" />
         </div>
       </div>
     </div>
+
+    <!--  -->
+    <!--  -->
+
     <div class="region region-6">
       <div class="region bottom-left">
         <div id="setting"></div>
@@ -46,7 +89,6 @@
         <div id="todo" class="todo"></div>
       </div>
     </div>
-    <script src="src/js/clock.js"></script>
-    <script src="src/js/gretting.js"></script>
+    <script src="src/js/dDay.js"></script>
   </body>
 </html>

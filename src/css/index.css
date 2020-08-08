@@ -1,115 +1,47 @@
-@import "reset.css";
-
-@media screen and (max-height: 1100px) {
-  .has-pomodoro .focuses .prompt h3 {
-    font-size: 80%;
-  }
-}
-@media screen and (max-height: 650px) {
-  .focuses .focus-row {
-    font-size: 110%;
-  }
-}
-@media screen and (max-height: 600px) {
-  .focuses .prompt input {
-    width: 15em;
-  }
-  .has-pomodoro .focuses .prompt input {
-    width: auto;
-  }
-}
-@media screen and (max-height: 550px) {
-  .focuses .prompt input {
-    width: 17.2em;
-  }
-}
 * {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: black;
-  color: white;
 }
-
 body {
-  min-height: 100%;
-  overflow: hidden;
-  background: #fff;
-  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-body,
-html {
-  height: 100%;
-}
-body,
-input,
-textarea {
-  margin: 0;
-  color: #fff;
-  font-size: 100%;
-}
-body,
-button,
-input,
-select,
-textarea {
-  font-family: -apple-system, BlinkMacSystemFont, "Neue Haas Grotesk Text Pro",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.region {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-::-webkit-scrollbar {
-  height: 13px;
-  width: 13px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  background-clip: padding-box;
-  border: 3px solid transparent;
-  border-radius: 7px;
-}
-:root {
-  --app-background: rgba(15, 15, 15, 0.925);
-  --app-text-color: #fff;
-  --dash-side-margin: 20px;
-  --bottom-side-width: auto;
-  --app-padding: 21px;
-  --border-radius: 5px;
-  --border-color: rgba(255, 255, 255, 0.15);
-  --border-color-low: rgba(255, 255, 255, 0.09);
-  --header-height: 47px;
-  --app-overlay-bg: rgba(255, 255, 255, 0.1);
-  --dropdown-hover-bg: rgba(255, 255, 255, 0.15);
-  --dropdown-bg: rgb(51, 51, 51);
-  --icon-color: #fff;
-  --a-show-full-duration: 0.3s;
-  --a-show-full-curve: ease-out;
-  --a-curve: ease;
-  --a-fast: 0.15s;
-  --a-default: all var(--a-fast) var(--a-curve);
-}
-
-.region-2 {
-  height: 60px;
-  display: flex;
-  align-items: flex-start;
-  flex: 0 0 auto;
-}
-.region-4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 auto;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: thistle;
 }
 
-.prompt.greetings {
-  display: none;
+.region {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 95px;
+}
+.region-3 {
+  height: 0;
 }
 
-.js-prompt {
+.region-4 {
+  height: 200px;
+  flex-direction: column;
 }
-.showing {
-  display: block;
+.dDay {
+  color: white;
+  font-size: 110px;
+}
+.format {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 50px;
+}
+.format-container {
+  background-color: violet;
+}
+
+.format-wrapper {
+  display: flex;
 }
