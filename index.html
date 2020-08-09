@@ -28,14 +28,42 @@
       </div>
       <!-- prv -->
       <!-- prv -->
-      <div class="prv-container">
-        <div class="prv-wrapper">
-          <div class="prv-wrapper__left">
-            <div class="prv-calndar" id="prv-calndar"></div>
+      <div class="prev-container">
+        <div class="prev-wrapper">
+          <div class="prev-wrapper__left">
+            <!-- prev-calendar -->
+            <table class="prev-calendar" id="prev-calendar" align="center">
+              <thead>
+                <tr class="btn-wrap clearfix">
+                  <td>
+                    <label id="prev">
+                      &#60;
+                    </label>
+                  </td>
+                  <td align="center" id="current-year-month" colspan="5"></td>
+                  <td>
+                    <label id="next">
+                      &#62;
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="sun" align="center">Sun</td>
+                  <td align="center">Mon</td>
+                  <td align="center">Tue</td>
+                  <td align="center">Wed</td>
+                  <td align="center">Thu</td>
+                  <td align="center">Fri</td>
+                  <td class="sat" align="center">Sat</td>
+                </tr>
+              </thead>
+              <tbody id="calendar-body" class="calendar-body"></tbody>
+            </table>
+            <!-- prev-calendar -->
           </div>
-          <div class="prv-wrapper__right">
-            <div class="prv-date" id="prv-date"></div>
-            <div class="prv-d-day" id="prv-d-day"></div>
+          <div class="prev-wrapper__right">
+            <div class="prev-date" id="prev-date">2020.08.09</div>
+            <div class="prev-d-day" id="prev-d-day">D-365</div>
           </div>
         </div>
       </div>
@@ -99,6 +127,6 @@
         <div id="todo" class="todo"></div>
       </div>
     </div>
-    <script src="src/js/dDay.js"></script>
+    <script src="src/js/calendar.js"></script>
   </body>
 </html>

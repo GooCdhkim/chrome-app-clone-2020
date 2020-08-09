@@ -26,17 +26,37 @@ body {
 /* r4 */
 
 .region-4 {
-  height: 200px;
   flex-direction: column;
 }
 /* r4__prv */
-.prv-wrapper {
+.prev-wrapper {
+  display: flex;
 }
-.prv-wrapper__right {
+.prev-wrapper__left {
+  float: left;
+  width: 90%;
+  padding: 10px;
 }
-.prv-wrapper__left {
+.prev-wrapper__left table tr td {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
-
+.sun {
+  color: #ef3333;
+}
+.sat {
+  color: #2107e0;
+}
+.prev-wrapper__right {
+  background: #0b0809;
+  color: #ddaf35;
+  float: left;
+  width: 100%;
+  padding: 30px;
+}
 .dDay {
   color: white;
   font-size: 110px;
@@ -54,4 +74,9 @@ body {
 
 .format-wrapper {
   display: flex;
+}
+/* r5 - must fix none!!!!!!!!!!!!!!!!!!!!!!! */
+.region-5 {
+  display: none;
+  flex-direction: column;
 }
