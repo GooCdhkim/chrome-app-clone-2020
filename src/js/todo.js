@@ -5,7 +5,7 @@ const toDoListFinished = document.querySelector(".js-toDoList-finished");
 
 const TODOS_LS = "penDing";
 const FINISH_LS = "finished";
-/* let i = 1; */
+
 let penDing = [];
 let finished = [];
 
@@ -46,13 +46,18 @@ function finishToDo(event) {
     id: newId,
   };
   delBtn.innerText = "X";
-  backBtn.innerText = "back";
+  backBtn.innerText = "Back";
   delBtn.addEventListener("click", deleteFinish);
   backBtn.addEventListener("click", backDelete);
   span.innerText = text;
   li.appendChild(span);
-  li.appendChild(delBtn);
   li.appendChild(backBtn);
+  li.appendChild(delBtn);
+  li.id = newId;
+  li.classList.add("animation-init");
+  setTimeout(function () {
+    li.classList.add("animation-fade");
+  }, 30);
   li.id = newId;
   toDoListFinished.appendChild(li);
 
@@ -74,15 +79,19 @@ function backPending(event) {
     text: text,
     id: newId,
   };
-
   delBtn.innerText = "X";
   finishBtn.innerText = "O";
   delBtn.addEventListener("click", deleteToDo);
   finishBtn.addEventListener("click", todoFinish);
   span.innerText = text;
   li.appendChild(span);
-  li.appendChild(delBtn);
   li.appendChild(finishBtn);
+  li.appendChild(delBtn);
+  li.id = newId;
+  li.classList.add("animation-init");
+  setTimeout(function () {
+    li.classList.add("animation-fade");
+  }, 30);
   li.id = newId;
   toDoListPending.appendChild(li);
 
@@ -116,13 +125,18 @@ function paintFinish(text) {
     id: newId,
   };
   delBtn.innerText = "X";
-  backBtn.innerText = "back";
+  backBtn.innerText = "Back";
   delBtn.addEventListener("click", deleteFinish);
   backBtn.addEventListener("click", backDelete);
   span.innerText = text;
   li.appendChild(span);
-  li.appendChild(delBtn);
   li.appendChild(backBtn);
+  li.appendChild(delBtn);
+  li.id = newId;
+  li.classList.add("animation-init");
+  setTimeout(function () {
+    li.classList.add("animation-fade");
+  }, 30);
   li.id = newId;
   toDoListFinished.appendChild(li);
 
@@ -147,11 +161,15 @@ function paintToDo(text) {
   finishBtn.addEventListener("click", todoFinish);
   span.innerText = text;
   li.appendChild(span);
-  li.appendChild(delBtn);
   li.appendChild(finishBtn);
+  li.appendChild(delBtn);
   li.id = newId;
-  toDoListPending.appendChild(li);
+  li.classList.add("animation-init");
+  setTimeout(function () {
+    li.classList.add("animation-fade");
+  }, 30);
 
+  toDoListPending.appendChild(li);
   penDing.push(toDoObj);
   saveToDos();
 }
