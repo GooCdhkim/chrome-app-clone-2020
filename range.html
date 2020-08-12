@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>range</title>
+    <link rel="stylesheet" href="src/css/range.css" />
+  </head>
+  <body>
+    <h1>Random Number Game</h1>
+    <h2>Generate a number between 0 and <label id="vol-html"></label></h2>
+    <input
+      type="range"
+      list="tickmarks"
+      id="vol"
+      name="number-range"
+      min="0"
+      max="100"
+    />
+    <datalist id="tickmarks">
+      <option value="0" label="0%"></option>
+      <option value="20"></option>
+      <option value="40"></option>
+      <option value="60"></option>
+      <option value="80"></option>
+      <option value="100" label="100%"></option>
+    </datalist>
+
+    <label for="guessField">Guess the number</label>
+    <input
+      type="number"
+      id="guessField"
+      class="guessField"
+      name="quantity"
+      min="0"
+      max="100"
+    />
+    <form id="lala">
+      <input id="guessSubmit" type="submit" value="Play!" />
+    </form>
+    <h3 id="winOrLost"></h3>
+    <h3 id="answer" class="answer"></h3>
+    <script src="src/js/range.js"></script>
+  </body>
+</html>
