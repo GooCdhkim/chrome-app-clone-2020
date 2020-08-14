@@ -1,138 +1,92 @@
-[slider] {
-  width: 300px;
-  position: relative;
-  height: 5px;
-  margin: 45px 0 10px 0;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-[slider] > div {
-  position: absolute;
-  left: 13px;
-  right: 15px;
-  height: 5px;
-}
-[slider] > div > [inverse-left] {
-  position: absolute;
-  left: 0;
-  height: 5px;
-  border-radius: 10px;
-  background-color: #ccc;
-  margin: 0 7px;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-[slider] > div > [inverse-right] {
+.calculator {
+  border: 1px solid #ccc;
+  border-radius: 5px;
   position: absolute;
-  right: 0;
-  height: 5px;
-  border-radius: 10px;
-  background-color: #ccc;
-  margin: 0 7px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
 }
 
-[slider] > div > [range] {
-  position: absolute;
-  left: 0;
-  height: 5px;
-  border-radius: 14px;
-  background-color: #d02128;
-}
-
-[slider] > div > [thumb] {
-  position: absolute;
-  top: -7px;
-  z-index: 2;
-  height: 20px;
-  width: 20px;
-  text-align: left;
-  margin-left: -11px;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  background-color: #fff;
-  border-radius: 50%;
-  outline: none;
-}
-
-[slider] > input[type="range"] {
-  position: absolute;
-  pointer-events: none;
-  -webkit-appearance: none;
-  z-index: 3;
-  height: 14px;
-  top: -2px;
+.calculator-screen {
   width: 100%;
-  opacity: 0;
-}
-
-div[slider] > input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: transparent;
-  border: transparent;
-}
-
-div[slider] > input[type="range"]:focus {
-  outline: none;
-}
-
-div[slider] > input[type="range"]::-webkit-slider-thumb {
-  pointer-events: all;
-  width: 28px;
-  height: 28px;
-  border-radius: 0px;
-  border: 0 none;
-  background: red;
-  -webkit-appearance: none;
-}
-
-div[slider] > input[type="range"]::-ms-fill-lower {
-  background: transparent;
-  border: 0 none;
-}
-
-div[slider] > input[type="range"]::-ms-fill-upper {
-  background: transparent;
-  border: 0 none;
-}
-
-div[slider] > input[type="range"]::-ms-tooltip {
-  display: none;
-}
-
-[slider] > div > [sign] {
-  opacity: 0;
-  position: absolute;
-  margin-left: -11px;
-  top: -39px;
-  z-index: 3;
-  background-color: #d02128;
+  font-size: 5rem;
+  height: 80px;
+  border: none;
+  background-color: #252525;
   color: #fff;
-  width: 28px;
-  height: 28px;
-  border-radius: 28px;
-  -webkit-border-radius: 28px;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  text-align: center;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
 }
 
-[slider] > div > [sign]:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  border-radius: 16px;
-  top: 19px;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top-width: 16px;
-  border-top-style: solid;
-  border-top-color: #d02128;
+button {
+  height: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
+  background-color: transparent;
+  font-size: 2rem;
+  color: #333;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(0, 0, 0, 0.04)
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
+    0 1px 0 0 rgba(255, 255, 255, 0.15);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
 }
 
-[slider] > div > [sign] > span {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 28px;
+button:hover {
+  background-color: #eaeaea;
 }
 
-[slider]:hover > div > [sign] {
-  opacity: 1;
+.operator {
+  color: #337cac;
+}
+
+.all-clear {
+  background-color: #f0595f;
+  border-color: #b0353a;
+  color: #fff;
+}
+
+.all-clear:hover {
+  background-color: #f17377;
+}
+
+.equal-sign {
+  background-color: #2e86c0;
+  border-color: #337cac;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+
+.equal-sign:hover {
+  background-color: #4e9ed4;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
 }
