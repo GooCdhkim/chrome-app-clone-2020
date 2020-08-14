@@ -4,6 +4,7 @@ const obj = {
   symbol: null,
   areYouWaitingB: false,
   infoScreen: "Salut!",
+  remember: "",
 };
 function updateScreen() {
   const display = document.querySelector(".screen");
@@ -12,20 +13,16 @@ function updateScreen() {
   infoScreen.value = obj.infoScreen;
 }
 updateScreen();
-/*  */
-/*  */
+
 function inputNum(num) {
   const {screenNum, areYouWaitingB} = obj;
-
   if (areYouWaitingB === true) {
     obj.screenNum = num;
     obj.areYouWaitingB = false;
   } else {
     obj.screenNum = screenNum === "0" ? num : screenNum + num;
   }
-  console.log(obj);
 }
-/*  */
 function inputDot(dot) {
   if (obj.areYouWaitingB === true) {
     obj.screenNum = "0.";
@@ -37,16 +34,12 @@ function inputDot(dot) {
     obj.screenNum += dot;
   }
 }
-/*  */
 function handleSymbol(secondSymbol) {
   const {a, screenNum, symbol} = obj;
   const inputNum = parseFloat(screenNum);
 
   if (symbol !== null && obj.areYouWaitingB) {
     obj.symbol = secondSymbol;
-    console.log(symbol);
-    console.log("SIBALLLLLL!!LL!L!");
-    console.log(obj);
     return;
   }
 
@@ -54,61 +47,46 @@ function handleSymbol(secondSymbol) {
     obj.a = inputNum;
   } else if (symbol) {
     const result = calculate(a, inputNum, symbol);
-    obj.screenNum = String(result);
+    obj.screenNum = `${commas(parseFloat(result.toFixed(7)))}`;
     obj.a = result;
   }
 
   obj.areYouWaitingB = true;
   obj.symbol = secondSymbol;
-  console.log(obj);
-  obj.infoScreen = `${String(obj.a)}${String(obj.symbol)}`;
 }
-/*  */
+function commas(num) {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 function calculate(a, b, symbol) {
-  if (symbol === "+") {
-    return a + b;
-  } else if (symbol === "-") {
-    return a - b;
-  } else if (symbol === "*") {
-    return a * b;
-  } else if (symbol === "/") {
-    return a / b;
-  }
-  return b;
+  return symbol === "+"
+    ? a + b
+    : symbol === "-"
+    ? a - b
+    : symbol === "*"
+    ? a * b
+    : symbol === "/"
+    ? a / b
+    : b;
 }
-/*  */
 function resetCalc() {
   obj.screenNum = "0";
   obj.a = null;
   obj.areYouWaitingB = false;
   obj.symbol = null;
-  console.log("All-clear");
-  obj.infoScreen = "All clear";
-  console.log(obj);
+  obj.infoScreen = "All Clear";
+  obj.remember = "";
 }
-/*  */
 function backCalc() {
-  if (
-    obj.areYouWaitingB === false &&
+  return obj.areYouWaitingB === false &&
     obj.screenNum !== 0 &&
     obj.screenNum.length !== 1
-  ) {
-    obj.screenNum = obj.screenNum.slice(0, -1);
-    console.log(obj);
-  } else if (obj.areYouWaitingB) {
-    obj.areYouWaitingB = false;
-    obj.a = null;
-    console.log(obj);
-  } else if (obj.areYouWaitingB === false && obj.screenNum.length === 1) {
-    obj.screenNum = "0";
-    console.log("clear");
-    console.log(obj);
-  } else {
-    console.log("error");
-    console.log(obj);
-  }
+    ? (obj.screenNum = obj.screenNum.slice(0, -1)) + (obj.infoScreen = "Back")
+    : obj.areYouWaitingB
+    ? (obj.areYouWaitingB = false) + (obj.a = null) + (obj.infoScreen = "Back")
+    : obj.areYouWaitingB === false && obj.screenNum.length === 1
+    ? (obj.screenNum = "0") + (obj.infoScreen = "All Clear")
+    : (obj.infoScreen = "Back");
 }
-/*  */
 function keySelector() {
   let keys = document.querySelectorAll(".keyss");
   let i;
@@ -125,6 +103,17 @@ function keySelector() {
         case "*":
         case "/":
         case "=":
+          obj.infoScreen = `${
+            value === "+"
+              ? "+"
+              : value === "-"
+              ? "-"
+              : value === "*"
+              ? "×"
+              : value === "/"
+              ? "÷"
+              : "="
+          }`;
           handleSymbol(value);
           break;
         case ".":
@@ -137,9 +126,9 @@ function keySelector() {
           resetCalc();
           break;
         default:
-          if (Number.isInteger(parseFloat(value))) {
-            inputNum(value);
-          }
+          Number.isInteger(parseFloat(value))
+            ? inputNum(value)
+            : updateScreen();
       }
       updateScreen();
     });
