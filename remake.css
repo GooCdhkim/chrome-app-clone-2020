@@ -83,8 +83,17 @@ div {
 
 
 /* 나중에 제거해야함 */
-#a,
+
 #b,
+
 #d {
+    display: none;
+}
+
+.js-cg-wrap {
+    display: none;
+}
+
+.js-getName-wrap {
     display: none;
 }

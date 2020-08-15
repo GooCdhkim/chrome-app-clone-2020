@@ -1,0 +1,58 @@
+#a,
+.title-wrap,
+.nameInput-wrap {
+    width: 100%;
+}
+
+#a,
+.title,
+.nameInput {
+    height: 100%;
+}
+
+.title-wrap {
+    height: 45%;
+
+}
+
+.nameInput-wrap {
+    margin-top: 25px;
+    height: 50%;
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(20, 20, 20);
+    font-size: 330%;
+    text-align: center;
+}
+
+.nameInput {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    font-size: 330%;
+}
+
+input {
+    border: none;
+}
+
+.nameInput input {
+    width: 580px;
+    outline-style: none;
+    background: none;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 100%;
+    border-bottom: 2.5px solid whitesmoke;
+}

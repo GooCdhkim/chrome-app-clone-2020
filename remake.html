@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hohoton</title>
     <link rel="stylesheet" href="remake.css" />
     <link rel="stylesheet" href="reclock.css" />
-  </head>
+    <link rel="stylesheet" href="whaturname.css" />
+</head>
 
-  <body>
+<body>
     <!--  -->
     <main>
-      <!--  -->
-      <div class="wrap wrap-a">
-        <div class="column left a__left"></div>
-        <div class="column center a__center"></div>
-        <div class="column right a__right"></div>
-      </div>
-      <!--  -->
-      <div class="wrap wrap-b">
-        <div class="column left b__left"></div>
-        <div class="column center b__center"></div>
-        <div class="column right b__right"></div>
-      </div>
-      <!--  -->
-      <div class="wrap wrap-c">
-        <div class="column left c__left"></div>
-        <!--  MAIN  -->
-        <div class="column center c__center">
-          <!--  -->
-          <div id="a" class="당신의-이름을-적어주세요">
-            <input type="text" />
-          </div>
-          <!--  -->
-          <div id="b" class="주로-사용하고싶은-기능을-선택해주세요">
-            <button class="시계로하겠습니다"></button>
-            <button class="디데이로하겠습니다"></button>
-          </div>
-          <!--  -->
-          <div id="c" class="cg-wrap">
-            <div class="clock-wrap">
-              <div id="digClock" class="clock digital"></div>
-            </div>
-            <div class="greeting-wrap">
-              <div class="greeting">Good evening, Donghu.</div>
-            </div>
-          </div>
-          <!--  -->
-          <div id="d" class="clock-wrap">
-            <div class="clock analog"></div>
-            <div class="greeting"></div>
-          </div>
+        <!--  -->
+        <div class="wrap wrap-a">
+            <div class="column left a__left"></div>
+            <div class="column center a__center"></div>
+            <div class="column right a__right"></div>
         </div>
-        <!--  MAIN  -->
-        <div class="column right c__right"></div>
-      </div>
-      <!--  -->
-      <div class="wrap wrap-d">
-        <div class="column left d__left"></div>
-        <div class="column center d__center"></div>
-        <div class="column right d__right"></div>
-      </div>
-      <!--  -->
-      <div class="wrap wrap-e">
-        <div class="column left e__left"></div>
-        <div class="column center e__center"></div>
-        <div class="column right e__right"></div>
-      </div>
+        <!--  -->
+        <div class="wrap wrap-b">
+            <div class="column left b__left"></div>
+            <div class="column center b__center"></div>
+            <div class="column right b__right"></div>
+        </div>
+        <!--  -->
+        <div class="wrap wrap-c">
+            <div class="column left c__left"></div>
+            <!--  MAIN  -->
+            <div class="column center c__center">
+                <!--  -->
+                <div id="a" class="getName-wrap">
+                    <div class="title-wrap">
+                        <div id="title" class="title">
+
+                        </div>
+                    </div>
+                    <div class="nameInput-wrap">
+                        <form class="nameInput">
+                            <input id="nameInput" type="text" value="" />
+                        </form>
+                    </div>
+                </div>
+                <!--  -->
+                <div id="b" class="주로-사용하고싶은-기능을-선택해주세요">
+                    <button class="시계로하겠습니다"></button>
+                    <button class="디데이로하겠습니다"></button>
+                </div>
+                <!--  -->
+                <div id="c" class="cg-wrap js-cg-wrap">
+                    <div class="clock-wrap">
+                        <div id="digClock" class="clock digital"></div>
+                    </div>
+                    <div class="greeting-wrap">
+                        <div class="greeting">
+                            Good evening, Donghu.
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div id="d" class="clock-wrap">
+                    <div class="clock analog"></div>
+                    <div class="greeting"></div>
+                </div>
+            </div>
+            <!--  MAIN  -->
+            <div class="column right c__right"></div>
+        </div>
+        <!--  -->
+        <div class="wrap wrap-d">
+            <div class="column left d__left"></div>
+            <div class="column center d__center"></div>
+            <div class="column right d__right"></div>
+        </div>
+        <!--  -->
+        <div class="wrap wrap-e">
+            <div class="column left e__left"></div>
+            <div class="column center e__center"></div>
+            <div class="column right e__right"></div>
+        </div>
     </main>
     <!--  -->
     <script src="reclock.js"></script>
-  </body>
+    <script src="gretting.js"></script>
+</body>
+
 </html>
