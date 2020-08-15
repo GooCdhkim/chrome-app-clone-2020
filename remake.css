@@ -62,7 +62,7 @@ div {
 /*  */
 /*  */
 .wrap .column {
-    margin: 2px;
+    /*     margin: 2px; */
     height: 100%;
 }
 
@@ -85,7 +85,6 @@ div {
 /* 나중에 제거해야함 */
 
 #b,
-
 #d {
     display: none;
 }
