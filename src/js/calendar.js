@@ -56,7 +56,7 @@ function showCalendar() {
     for (var j = 0; j < 7; j++) {
       if (
         (i === 0 && j < first.getDay()) /* 토요일 = 6 */ ||
-        cnt > pageYear[first.getMonth() /* 8월=7 */]
+        cnt > pageYear[first.getMonth() /* 8월=7 */ ]
       ) {
         var createTd = document.createElement("td");
         createTr.appendChild(createTd);
@@ -75,7 +75,7 @@ showCalendar();
 
 function showMain() {
   mainTodayDay.innerHTML = dayList[today.getDay()];
-  mainTodayDate.innerHTML = today.getDate();
+  mainTodayDate.innerHTML = `${today.getFullYear()}-${today.getMonth()+1 < 10 ? `0${today.getMonth()+1}` :today.getMonth()+1}-${today.getDate() < 10 ? `0${today.getDate()}` :today.getDate()}`;
 }
 showMain();
 
@@ -149,12 +149,14 @@ var nextBtn = document.getElementById("next");
 prevBtn.addEventListener("click", prev);
 nextBtn.addEventListener("click", next);
 var tdGroup = [];
+
 function clickStart() {
   for (let i = 1; i <= pageYear[first.getMonth()]; i++) {
     tdGroup[i] = document.getElementById(i);
     tdGroup[i].addEventListener("click", changeToday);
   }
 }
+
 function changeToday(e) {
   for (let i = 1; i <= pageYear[first.getMonth()]; i++) {
     if (tdGroup[i].classList.contains("active")) {
