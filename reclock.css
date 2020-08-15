@@ -1,0 +1,43 @@
+#c,
+.clock-wrap,
+.greeting-wrap {
+    width: 100%;
+}
+
+#c,
+.digital,
+.greeting {
+    height: 100%;
+}
+
+
+.clock-wrap {
+    height: 60%;
+}
+
+.greeting-wrap {
+    height: 40%;
+}
+
+.digital {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: rgb(20, 20, 20);
+    font-size: 1000%;
+}
+
+.greeting {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    background-color: black;
+    font-size: 330%;
+}
