@@ -12,16 +12,16 @@ const obj = {
 function switchMsg() {
     switch (true) {
         case (obj.hours < 4):
-            obj.greetingMsg = "Good evening,";
+            obj.greetingMsg = "Good evening, ";
             break;
         case (obj.hours < 12):
-            obj.greetingMsg = "Good morning,";
+            obj.greetingMsg = "Good morning, ";
             break;
         case (obj.hours < 18):
-            obj.greetingMsg = "Good afternoon,";
+            obj.greetingMsg = "Good afternoon, ";
             break;
         default:
-            obj.greetingMsg = "Good evening,";
+            obj.greetingMsg = "Good evening, ";
             break;
     }
 
@@ -55,7 +55,7 @@ function showTypeC() {
     typeC.classList.remove("js-cg-wrap");
     switchMsg()
     obj.userName = localStorage.userName;
-    showTitle.innerText = obj.greetingMsg + obj.userName;
+    showTitle.innerText = obj.greetingMsg + obj.userName + ".";
 }
 
 function loadName() {
