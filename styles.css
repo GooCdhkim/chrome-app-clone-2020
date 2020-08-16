@@ -26,8 +26,12 @@ main,
         opacity: 0;
     }
 
+    50% {
+        opacity: 0;
+    }
+
     100% {
-        opacity: 0.9;
+        opacity: 0.98;
     }
 }
 
@@ -39,7 +43,7 @@ body {
     height: 100vh;
     background-color: black;
     background-image: none;
-    opacity: 0.9;
+    opacity: 0.98;
     animation: showON 1s ease-in-out;
 }
 
