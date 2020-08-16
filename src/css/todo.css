@@ -1,0 +1,97 @@
+.todo-wrap {
+  top: 15px;
+  left: 20px;
+  position: absolute;
+  color: gray;
+  font-size: 25px;
+  font-weight: 600;
+  transition: color 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.todo-wrap:hover {
+  color: white;
+}
+
+.todo {
+  top: 40px;
+  left: 20px;
+  margin-top: 20px;
+  border-radius: 2%;
+  background-color: black;
+  position: absolute;
+  color: white;
+
+}
+
+.animation-init {
+  opacity: 0;
+}
+
+.todo h2,
+h1 {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.todo h1 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.todo input {
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo input:focus {
+  width: 400px;
+  text-align: center;
+  outline: none;
+}
+
+.todo input::placeholder {
+  background-color: none;
+}
+
+.todo button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  background: gray;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  opacity: 0.2;
+}
+
+.todo button:hover {
+  outline: none;
+  opacity: 0.9;
+}
+
+.animation-fade {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.todo li {
+  font-size: 15px;
+
+}
+
+li span {
+  margin-right: 20px;
+}
+
+.openTodo {
+  display: none;
+}

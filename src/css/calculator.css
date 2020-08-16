@@ -1,0 +1,109 @@
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body,
+main,
+.cal-wrapper,
+.region,
+.keyss,
+.ipz {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+body {
+  user-select: none;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: var(--font);
+}
+main {
+  margin-top: 300px;
+  transform: scale(3);
+}
+.keyss {
+  align-items: center;
+}
+.screen {
+  box-sizing: border-box;
+  margin: -2px 2px;
+  padding: 10px 10px 0px 10px;
+  background-color: #363439;
+  height: 40px;
+  width: 252px;
+  border: none;
+  text-align: right;
+  color: white;
+  font-size: 30px;
+}
+.infoScreen {
+  box-sizing: border-box;
+  margin: 2px 2px;
+  padding: 0px 10px;
+  background-color: #363439;
+  height: 30px;
+  width: 252px;
+  border: none;
+  text-align: right;
+  color: gray;
+  font-size: 15px;
+  font-weight: 700;
+}
+.btn:focus,
+#display:focus {
+  outline: none;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btn:active {
+  opacity: 0.9;
+}
+.keyss {
+  flex-direction: row;
+}
+/* 전체 버튼의 글씨색, 폰트 ,높이, 보더*/
+.btn {
+  margin: 2px;
+  border: none;
+  border-radius: 3px;
+  font-family: var(--font);
+  font-weight: 600;
+  background-color: #363439;
+  color: white;
+  height: 30px;
+}
+/* 기본타입 */
+.ta {
+  width: 60px;
+}
+/* 넓은타입 */
+.tb {
+  width: 124px;
+}
+/* 클리어, 백 */
+.tc {
+  background-color: #aaa9b1;
+}
+/* 연산 */
+.td {
+  background-color: #fe8e00;
+}
+/* = */
+.te {
+  background-color: #e77f67;
+}
+.td,
+.te {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: 400;
+  font-size: 19px;
+}

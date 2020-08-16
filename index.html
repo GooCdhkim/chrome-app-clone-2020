@@ -1,134 +1,126 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>humentom</title>
-    <link rel="stylesheet" href="src/css/index.css" />
-  </head>
-  <body>
-    <div class="region region-1"></div>
-    <div class="region region-2">
-      <div class="region top-left"></div>
-      <div class="region top"></div>
-      <div class="region top-right">
-        <div id="weather" class="weather-container"><div></div></div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hohoton</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="src/js/background.js" as="script">
+
+</head>
+
+<body>
+  <!--  -->
+  <main>
+    <!--  -->
+    <div id="splash-screen"></div>
+    <div class="wrap wrap-a">
+      <div class="column left a__left">
+        <div class="todo-wrap">Todo</div>
+      </div>
+      <div class="column center a__center"></div>
+      <div class="column right a__right">
+        <div id="weather"></div>
       </div>
     </div>
-    <div class="region region-3"></div>
-
     <!--  -->
-    <!--  -->
-
-    <div class="region region-4">
-      <div class="dDay-container">
-        <div class="dDay-wrapper">
-          <span id="dDay" class="dDay">D-365</span>
-        </div>
-      </div>
-      <!-- prv -->
-      <!-- prv -->
-      <div class="prev-container">
-        <div class="prev-wrapper">
-          <div class="prev-wrapper__left">
-            <!-- prev-calendar -->
-            <table class="prev-calendar" id="prev-calendar" align="center">
-              <thead>
-                <tr class="btn-wrap clearfix">
-                  <td>
-                    <label id="prev">
-                      &#60;
-                    </label>
-                  </td>
-                  <td align="center" id="current-year-month" colspan="5"></td>
-                  <td>
-                    <label id="next">
-                      &#62;
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="sun" align="center">Sun</td>
-                  <td align="center">Mon</td>
-                  <td align="center">Tue</td>
-                  <td align="center">Wed</td>
-                  <td align="center">Thu</td>
-                  <td align="center">Fri</td>
-                  <td class="sat" align="center">Sat</td>
-                </tr>
-              </thead>
-              <tbody id="calendar-body" class="calendar-body"></tbody>
-            </table>
-            <!-- prev-calendar -->
-          </div>
-          <div class="prev-wrapper__right">
-            <div class="prev-date" id="prev-date">2020.08.09</div>
-            <div class="prev-d-day" id="prev-d-day">D-365</div>
-          </div>
-        </div>
-      </div>
-      <!-- prv -->
-      <!-- prv -->
-      <div class="format-container">
-        <div class="format-wrapper">
-          <div class="format format-years">
-            <select name="years" id="years">
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-            </select>
-          </div>
-          <div class="format format-months">
-            <select name="months" id="months">
-              <option value="Jan">Jan</option>
-              <option value="Feb">Feb</option>
-              <option value="Mar">Mar</option>
-            </select>
-          </div>
-          <div class="format format-days">
-            <select name="days" id="days">
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="format submit-btn-wrapper">
-            <button class="submit-btn">
-              <span class="ico submit-btn-ico">></span>
-            </button>
-          </div>
-        </div>
-      </div>
+    <div class="wrap wrap-b">
+      <div class="column left b__left"></div>
+      <div class="column center b__center"></div>
+      <div class="column right b__right"></div>
     </div>
-
     <!--  -->
+    <div class="wrap wrap-c">
+      <div class="column left c__left"></div>
+      <!--  MAIN  -->
+      <div class="column center c__center">
+        <!--  -->
+        <div id="a" class="getName-wrap">
+          <div class="title-wrap">
+            <div id="title" class="title"></div>
+          </div>
+          <div class="nameInput-wrap">
+            <form class="nameInput">
+              <input id="nameInput" type="text" value="" />
+            </form>
+          </div>
+        </div>
+        <!--  -->
+        <div id="b" class="주로-사용하고싶은-기능을-선택해주세요">
+          <button class="시계로하겠습니다"></button>
+          <button class="디데이로하겠습니다"></button>
+        </div>
+        <!--  -->
+        <div id="c" class="cg-wrap js-cg-wrap">
+          <div class="clock-wrap">
+            <div id="digClock" class="clock digital"></div>
+          </div>
+          <div class="greeting-wrap">
+            <div class="greeting">
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div id="d" class="clock-wrap">
+          <div class="clock analog"></div>
+          <div class="greeting"></div>
+        </div>
+      </div>
+      <!--  MAIN  -->
+      <div class="column right c__right"></div>
+    </div>
     <!--  -->
+    <div class="wrap wrap-d">
+      <div class="column left d__left"></div>
+      <div class="column center d__center">
+        <div class="focusToday">
+          <div class="focusTitle">What is your main focus for today?</div>
+        </div>
+        <form class="focusForm">
+          <input class="focusInput" type="text" name="" id="focusInput">
+        </form>
+        <div class="showFocus"><button></button></div>
+      </div>
+      <div class="column right d__right"></div>
+    </div>
+    <!--  -->
+    <div class="wrap wrap-e">
+      <div class="column left e__left"></div>
+      <div class="column center e__center"></div>
+      <div class="column right e__right">
+        <div>
+          <div class="todo openTodo">
+            <h1>Todo</h1>
+            <form class="js-toDoForm">
+              <input type="text" placeholder="Write a To Do" />
+            </form>
+            <ul class="js-toDoList-pending">
+              <h2>Pending<h2>
+            </ul>
 
-    <div class="region region-5">
-      <div class="focus-wrapper">
-        <div class="focuses">
-          <h3></h3>
-          <input type="text" autocomplete="off" />
+            <ul class="js-toDoList-finished">
+              <h2>Finished<h2>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+  </main>
+  <!--  -->
 
-    <!--  -->
-    <!--  -->
+  <script src="src/js/gretting.js"></script>
+  <script src="src/js/clock.js"></script>
+  <script src="src/js/weather.js"></script>
+  <script src="src/js/background.js"></script>
+  <script src="src/js/todo.js"></script>
+  <script src="src/js/mainfocus.js"></script>
+  <!-- WIP -->
+  <!--   <script src="src/js/calculator.js"></script>
+  <script src="src/js/calendar.js"></script>
+  <script src="src/js/prevnext.js"></script>
+  <script src="src/js/calendar.js"></script> -->
 
-    <div class="region region-6">
-      <div class="region bottom-left">
-        <div id="setting"></div>
-        <div id="photoName"></div>
-      </div>
-      <div class="region bottom">
-        <div id="quotes"></div>
-      </div>
-      <div class="region bottom-right">
-        <div id="todo" class="todo"></div>
-      </div>
-    </div>
-    <script src="src/js/calendar.js"></script>
-    <script src="src/js/prevnext.js"></script>
-    <!--     <script src="src/js/calendar.js"></script> -->
-  </body>
+</body>
+
 </html>

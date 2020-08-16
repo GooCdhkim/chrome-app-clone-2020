@@ -3,6 +3,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,24 +21,31 @@ body {
   width: 100%;
   height: 95px;
 }
+
 .region-3 {
   height: 0;
 }
+
 /* r3 */
 /* r4 */
 
 .region-4 {
   flex-direction: column;
 }
+
 /* r4__prv */
 .prev-wrapper {
+  width: 1000px;
   display: flex;
+  background-color: gray;
 }
+
 .prev-wrapper__left {
   float: left;
-  width: 90%;
+  width: 60%;
   padding: 10px;
 }
+
 .prev-wrapper__left table tr td {
   width: 40px;
   height: 40px;
@@ -45,22 +53,57 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+
 .sun {
   color: #ef3333;
 }
+
 .sat {
   color: #2107e0;
 }
+
 .prev-wrapper__right {
   color: black;
   float: left;
-  width: 100%;
+  width: 40%;
   padding: 30px;
 }
+
+.prev-wrapper__right {
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-d-day,
+.prev-date {
+  margin: 20px;
+  background-color: gray;
+  color: white;
+}
+
+.prev-date {
+  font-size: 55px;
+
+}
+
+.prev-d-day {
+  font-size: 80px;
+}
+
+
+
+
+
+/*  */
+/*  */
 .dDay {
   color: white;
   font-size: 110px;
 }
+
 .format {
   display: flex;
   justify-content: center;
@@ -68,6 +111,7 @@ body {
   width: 100px;
   height: 50px;
 }
+
 .format-container {
   background-color: violet;
 }
@@ -75,6 +119,7 @@ body {
 .format-wrapper {
   display: flex;
 }
+
 /* r5 - must fix none!!!!!!!!!!!!!!!!!!!!!!! */
 .region-5 {
   display: none;
