@@ -3,49 +3,66 @@ const form = document.querySelector(".nameInput");
 const input = form.querySelector("input");
 const obj = {
     screenTitle: "Hello What's your Name?",
-    screenName: null,
     didIGotAName: false,
-    storageName: null,
+    userName: null,
+    greetingMsg: String,
+    hours: Number,
 };
 
+function switchMsg() {
+    switch (true) {
+        case (obj.hours < 4):
+            obj.greetingMsg = "Good evening,";
+            break;
+        case (obj.hours < 12):
+            obj.greetingMsg = "Good morning,";
+            break;
+        case (obj.hours < 18):
+            obj.greetingMsg = "Good afternoon,";
+            break;
+        default:
+            obj.greetingMsg = "Good evening,";
+            break;
+    }
+
+}
+
 function updateScreens() {
-    obj.storageName = localStorage.storageName
-    obj.screenName = obj.storageName
-    title.innerText = obj.screenTitle
+    obj.userName = localStorage.userName;
+    title.innerText = obj.screenTitle;
 }
 updateScreens();
 
 function askName() {
     form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        const text = input.value
-        saveName(text)
-        showName();
+        event.preventDefault();
+        const text = input.value;
+        saveName(text);
+        showTypeC();
     });
-};
+}
 
 function saveName(text) {
-    localStorage.setItem("storageName", text)
-    obj.storageName = localStorage.storageName
+    localStorage.setItem("userName", text);
     obj.didIGotAName = true;
 }
 
-function showName() {
-    const showTitle = document.querySelector(".greeting")
-    const typeC = document.querySelector(".cg-wrap")
-    const typeA = document.querySelector(".getName-wrap")
-    typeA.classList.add("js-getName-wrap")
-    typeC.classList.remove("js-cg-wrap")
-    obj.screenName = obj.storageName
-    showTitle.innerText = "Good evening, " + obj.screenName + "."
-};
+function showTypeC() {
+    const showTitle = document.querySelector(".greeting");
+    const typeC = document.querySelector(".cg-wrap");
+    const typeA = document.querySelector(".getName-wrap");
+    typeA.classList.add("js-getName-wrap");
+    typeC.classList.remove("js-cg-wrap");
+    switchMsg()
+    obj.userName = localStorage.userName;
+    showTitle.innerText = obj.greetingMsg + obj.userName;
+}
 
 function loadName() {
-    if (localStorage.storageName) {
+    if (localStorage.userName) {
         obj.didIGotAName = true;
-        showName();
+        showTypeC();
     } else {
         askName();
     }
 }
-loadName();
