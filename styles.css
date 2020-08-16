@@ -1,7 +1,10 @@
-@import "src/css/splash.css";
 @import "src/css/reclock.css";
 @import "src/css/weather.css";
 @import "src/css/whaturname.css";
+@import "src/css/todo.css";
+@import "src/css/mainfocus.css";
+/* WIP */
+/* @import "src/css/calculator.css"; */
 
 
 
@@ -29,6 +32,7 @@ main,
 }
 
 body {
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -95,6 +99,7 @@ div {
 .right {
     width: 10%;
 }
+
 
 
 /* 나중에 제거해야함 */

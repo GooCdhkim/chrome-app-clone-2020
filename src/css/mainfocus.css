@@ -1,0 +1,85 @@
+.d__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.focusToday,
+.focusForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.focusToday {
+    height: 40%;
+    align-content: flex-end;
+}
+
+.focusForm {
+    align-content: flex-start;
+    height: 60%;
+    display: none;
+}
+
+
+.focusTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: initial;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 220%;
+    text-align: center;
+}
+
+.focusInput {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    width: 530px;
+    height: 40px;
+    outline-style: none;
+    background: none;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 200%;
+    border-bottom: 2.5px solid whitesmoke;
+}
+
+.hideInput {
+    display: flex;
+}
+
+.showFocus {
+    display: none;
+}
+
+.onShowFocus {
+    top: 0px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 220%;
+    margin-left: 60px;
+
+}
+
+.onShowFocus button {
+    border-radius: 50%;
+    outline-style: none;
+    border: none;
+    margin: 20px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.onShowFocus button:hover {
+    opacity: 0.7;
+}

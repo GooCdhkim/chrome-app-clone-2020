@@ -16,7 +16,9 @@
     <!--  -->
     <div id="splash-screen"></div>
     <div class="wrap wrap-a">
-      <div class="column left a__left"></div>
+      <div class="column left a__left">
+        <div class="todo-wrap">Todo</div>
+      </div>
       <div class="column center a__center"></div>
       <div class="column right a__right">
         <div id="weather"></div>
@@ -71,14 +73,38 @@
     <!--  -->
     <div class="wrap wrap-d">
       <div class="column left d__left"></div>
-      <div class="column center d__center"></div>
+      <div class="column center d__center">
+        <div class="focusToday">
+          <div class="focusTitle">What is your main focus for today?</div>
+        </div>
+        <form class="focusForm">
+          <input class="focusInput" type="text" name="" id="focusInput">
+        </form>
+        <div class="showFocus"><button></button></div>
+      </div>
       <div class="column right d__right"></div>
     </div>
     <!--  -->
     <div class="wrap wrap-e">
       <div class="column left e__left"></div>
       <div class="column center e__center"></div>
-      <div class="column right e__right"></div>
+      <div class="column right e__right">
+        <div>
+          <div class="todo openTodo">
+            <h1>Todo</h1>
+            <form class="js-toDoForm">
+              <input type="text" placeholder="Write a To Do" />
+            </form>
+            <ul class="js-toDoList-pending">
+              <h2>Pending<h2>
+            </ul>
+
+            <ul class="js-toDoList-finished">
+              <h2>Finished<h2>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
   <!--  -->
@@ -87,6 +113,13 @@
   <script src="src/js/clock.js"></script>
   <script src="src/js/weather.js"></script>
   <script src="src/js/background.js"></script>
+  <script src="src/js/todo.js"></script>
+  <script src="src/js/mainfocus.js"></script>
+  <!-- WIP -->
+  <!--   <script src="src/js/calculator.js"></script>
+  <script src="src/js/calendar.js"></script>
+  <script src="src/js/prevnext.js"></script>
+  <script src="src/js/calendar.js"></script> -->
 
 </body>
 

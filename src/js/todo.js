@@ -31,6 +31,7 @@ function deleteFinish(event) {
   finished = cleanToDos;
   saveFinished();
 }
+
 function finishToDo(event) {
   const dBtn = event.target;
   const pli = dBtn.parentNode;
@@ -43,7 +44,7 @@ function finishToDo(event) {
   const newId = finished.length + 1;
   const toDoObj = {
     text: text,
-    id: newId,
+    id: newId
   };
   delBtn.innerText = "X";
   backBtn.innerText = "Back";
@@ -77,7 +78,7 @@ function backPending(event) {
   const newId = penDing.length + 1;
   const toDoObj = {
     text: text,
-    id: newId,
+    id: newId
   };
   delBtn.innerText = "X";
   finishBtn.innerText = "O";
@@ -98,10 +99,12 @@ function backPending(event) {
   penDing.push(toDoObj);
   saveToDos();
 }
+
 function backDelete(event) {
   backPending(event);
   deleteFinish(event);
 }
+
 function todoFinish(event) {
   finishToDo(event);
   deleteToDo(event);
@@ -110,6 +113,7 @@ function todoFinish(event) {
 function saveToDos() {
   localStorage.setItem(TODOS_LS, JSON.stringify(penDing));
 }
+
 function saveFinished() {
   localStorage.setItem(FINISH_LS, JSON.stringify(finished));
 }
@@ -122,7 +126,7 @@ function paintFinish(text) {
   const newId = finished.length + 1;
   const toDoObj = {
     text: text,
-    id: newId,
+    id: newId
   };
   delBtn.innerText = "X";
   backBtn.innerText = "Back";
@@ -152,7 +156,7 @@ function paintToDo(text) {
   const newId = penDing.length + 1;
   const toDoObj = {
     text: text,
-    id: newId,
+    id: newId
   };
 
   delBtn.innerText = "X";
@@ -191,6 +195,7 @@ function loadToDos() {
     });
   }
 }
+
 function loadFinished() {
   const loadFinisheds = localStorage.getItem(FINISH_LS);
   if (loadFinisheds !== null) {
@@ -200,9 +205,22 @@ function loadFinished() {
     });
   }
 }
+
+
 function init() {
   loadToDos();
   loadFinished();
   toDoForm.addEventListener("submit", handleSubmit);
 }
 init();
+
+function openTodo() {
+  const openBtn = document.querySelector(".todo-wrap")
+  const todoList = document.querySelector(".todo")
+  openBtn.addEventListener("click", openTodoList)
+
+  function openTodoList() {
+    todoList.classList.toggle("openTodo")
+  }
+}
+openTodo();
