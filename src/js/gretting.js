@@ -24,7 +24,6 @@ function switchMsg() {
             obj.greetingMsg = "Good evening, ";
             break;
     }
-
 }
 
 function updateScreens() {

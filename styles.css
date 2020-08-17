@@ -1,4 +1,5 @@
 @import "src/css/reclock.css";
+@import "src/css/analogclock.css";
 @import "src/css/weather.css";
 @import "src/css/whaturname.css";
 @import "src/css/todo.css";
@@ -41,7 +42,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-color: black;
+    background-color: gray;
     background-image: none;
     opacity: 0.98;
     animation: showON 1s ease-in-out;
