@@ -66,7 +66,7 @@
               </div>
             </div>
             <!--  -->
-            <div id="digClock" class="digclock digital"></div>
+            <div id="digClock" class="digclock digital digitalTog"></div>
           </div>
           <div class="greeting-wrap">
             <div class="greeting">
@@ -80,7 +80,9 @@
         </div>
       </div>
       <!--  MAIN  -->
-      <div class="column right c__right"></div>
+      <div class="column right c__right">
+        
+      </div>
     </div>
     <!--  -->
     <div class="wrap wrap-d">
@@ -98,9 +100,16 @@
     </div>
     <!--  -->
     <div class="wrap wrap-e">
-      <div class="column left e__left"></div>
+      <div class="column left e__left">
+        <div class="changeClockTypeBtn">
+          <div class="setting-box">
+            <div class ="clockstyle">Change Clock Style</div>
+            <div class ="clockstyle-btn"></div>
+        </div>
+        <i class="fas fa-cog fs-lg"></i>
+      </div>
       <div class="column center e__center"></div>
-      <div class="column right e__right">
+      <div id="todozone"class="column right e__right">
         <div>
           <div class="todo openTodo">
             <h1>Todo</h1>
@@ -127,6 +136,8 @@
   <script src="src/js/background.js"></script>
   <script src="src/js/todo.js"></script>
   <script src="src/js/mainfocus.js"></script>
+  <script src="src/js/btn.js"></script>
+  <script src="https://kit.fontawesome.com/2d4bec9180.js" crossorigin="anonymous"></script>
   <!-- WIP -->
   <!--   <script src="src/js/calculator.js"></script>
   <script src="src/js/calendar.js"></script>

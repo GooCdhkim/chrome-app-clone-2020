@@ -1,3 +1,7 @@
+#todozone {
+  width: 0;
+  height: 0;
+}
 .todo-wrap {
   top: 15px;
   left: 20px;
@@ -22,7 +26,6 @@
   opacity: 0.8;
   position: absolute;
   color: white;
-
 }
 
 .animation-init {
@@ -86,7 +89,6 @@ h1 {
 
 .todo li {
   font-size: 15px;
-
 }
 
 li span {

@@ -90,3 +90,7 @@
   border-radius: 3px 3px 2px 2px;
   opacity: 0.9;
 }
+
+.analogTog {
+  display: none;
+}
