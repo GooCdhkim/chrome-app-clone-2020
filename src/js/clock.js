@@ -18,7 +18,6 @@ digitalClock();
 loadName();
 setInterval(loadName, 1000);
 
-
 function analongClock() {
   const deg = 6;
   const hr = document.querySelector("#hr");
@@ -33,6 +32,5 @@ function analongClock() {
     mn.style.transform = `rotateZ(${mm}deg)`;
     sc.style.transform = `rotateZ(${ss}deg)`;
   });
-
 }
 analongClock();

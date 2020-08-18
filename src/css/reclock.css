@@ -1,50 +1,59 @@
 #c,
 .clock-wrap,
 .greeting-wrap {
-    width: 100%;
+  width: 100%;
 }
 
 #c,
 .digital,
 .greeting {
-    height: 100%;
+  height: 100%;
 }
 
-
-
 .clock-wrap {
-    height: 60%;
+  height: 60%;
+  position: relative;
 }
 
 .greeting-wrap {
-    height: 40%;
+  height: 40%;
 }
 
 .digital {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: initial;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    /*     background-color: rgb(20, 20, 20); */
-    font-size: 1000%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: initial;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /*     background-color: rgb(20, 20, 20); */
+  font-size: 1000%;
 }
 
 .greeting {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: initial;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: flex-start;
-    /*     background-color: black; */
-    font-size: 330%;
-    padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: initial;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+  /*     background-color: black; */
+  font-size: 330%;
+  padding-bottom: 5px;
 }
 
-
 .digital {
-    display: none;
+  display: none;
+}
+
+.changeClockTypeBtn {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.changeClockTypeBtn:hover {
 }
