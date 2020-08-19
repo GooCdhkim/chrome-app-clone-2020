@@ -1,41 +1,39 @@
-<!-- # Project1
-
+# huhuton
 
 ## Introduction
 
-Project 1 is _______
+huhuton is a cloned Momentum on Chrome app.
+use JS, HTML, CSS
 
-<https://>
+<https://dhkim2020.github.io/chrome-app-clone-2020/>
 
-![](https://readme.gif)
+<!-- ![](https://readme.gif) -->
 
 ## Content
 
-* [Requirements](#requirements)
-* [Installation](#installation)
-* [Features](#features)
-* [Skills](#skills)
-* [Tests](#tests)
-* [Deployment/Continuous-Integratio](#deploymentcontinuous-integration)
-* [Project-management](#project-management)
-* [Things-To-Do](#things-To-Do)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Features](#features)
+- [Skills](#skills)
+- [Tests](#tests)
+- [Deployment/Continuous-Integratio](#deploymentcontinuous-integration)
+- [Project-management](#project-management)
+- [Things-To-Do](#things-To-Do)
 
 ## Requirements
-*
-*
-* Must be use Chrome
+
+- Must be use Chrome
 
 ## Installation
 
 ### Client
+
 <pre>
 git clone https://github.com/dhkim2020/chrome-app-clone-2020
 cd chrome-app-clone-2020
-npm install
-npm start
 </pre>
 
-### Server
+<!-- ### Server
 * Node.js
 * Express
 * ES2015+
@@ -44,64 +42,61 @@ npm start
 * Mongoose
 * Atlas
 
-### Set server environment
-
-<pre>
-.env
-DATABASE_URI = "Input your MongoDB databse uri"
-CLIENT_ADDRESS = "Input your client address"
-</pre>
+### Set server environment -->
 
 ## Features
 
-* D-day
-* Now time
+- D-day
+- Calendar
+- Calculator
+- SavePhoto
 
 ## Skills
 
 ### Client
-* JS
-* HTML5
-* Sass
 
-### Server
-* Node.js
+- JS
+- HTML5
+- CSS
 
-## Test
+<!-- ### Server
+* Node.js -->
 
-* PropTypes
-* Unit Test (Jest)
-* Component Unit Test (Jest, Enzyme)
-* cypress E2E test
+<!-- ## Test
 
-[![Video Label](http://.jpg)](https://www.youtube.com)
+*
+*
+*
+*
+ -->
+<!-- [![Video Label](http://.jpg)](https://www.youtube.com) -->
 
 ## Deployment/Continuous-Integration
 
-### Client
-* Netlify Auto
+<!-- ### Client
+* Netlify Auto -->
 
-### Server
+<!-- ### Server
 * AWS Elastic beanstalk
-* CircleCI Auto
+* CircleCI Auto -->
 
 ## Project-management
-* Git, Github
-* googletask
+
+- Git, Github
+- googletask
 
 ## Challenges
-*
 
-*
+\*
 
-*
+\*
 
+\*
 
 ## Things-To-Do
-*
-*
-*
+
+\* \* \*
 
 ## Sincere Thanks
-[dhkim](https://github.com/dhkim2020)
- -->
+
+[Nomad Coders](https://nomadcoders.co/)
