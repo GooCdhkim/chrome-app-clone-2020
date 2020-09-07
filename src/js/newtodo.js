@@ -22,28 +22,29 @@ const goocTodoList = function (boxid, title) {
 
   const submitTodo = function () {
     event.preventDefault();
-
     let todoContent = todoInput.value;
     todoContentsList.push(todoContent);
     todoContent = document.createTextNode(todoContent);
     const todoLi = document.createElement("li");
-    todoLi.id = "content" + todoContentsList.length;
+    let idLogic = "content" + todoContentsList.length;
+    todoLi.id = idLogic;
     const todoCheckBox = document.createElement("input");
     todoCheckBox.type = "checkbox";
     todoLi.appendChild(todoCheckBox);
-    todoCheckBox.classList.add("content" + todoContentsList.length);
+    todoCheckBox.classList.add(idLogic);
+    const removeTodo = function () {
+      const removeTarget = this.classList[0];
+      const li = document.getElementById(removeTarget);
+      li.remove();
+    };
     todoLi.appendChild(todoContent);
     todoUl.appendChild(todoLi);
     todoInput.value = "";
-    console.log(todoContentsList);
+    console.log(todoContentsList.value);
+    todoCheckBox.addEventListener("change", removeTodo);
   };
-  const finishTodo = function () {
-    console.log("fuck");
-  };
-  todoForm.addEventListener("submit", submitTodo);
-  todoCheckBox.addEventListener("click", finishTodo);
 
-  console.log(todoContentsList);
+  todoForm.addEventListener("submit", submitTodo);
 };
 
 goocTodoList("MYTODO", "TodoLIST!");
